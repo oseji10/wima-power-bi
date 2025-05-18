@@ -19,3 +19,4 @@ Route::get('/district', [WimaController::class, 'retrieveDistrict']);
 Route::get('/msp-type', [WimaController::class, 'retrieveMspType']);
 Route::get('/qualification', [WimaController::class, 'retrieveQualification']);
 Route::get('/languages', [WimaController::class, 'retrieveLanguages']);
+Route::get('/availability', [WimaController::class, 'retrieveAvailability']);

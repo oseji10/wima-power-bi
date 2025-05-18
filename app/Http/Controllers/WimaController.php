@@ -76,4 +76,25 @@ public function retrieveQualification()
     ->get();
     return response()->json($qualification);
 }
+
+public function retrieveReligion()
+{
+     $religion = Databank::select('religion', DB::raw('COUNT(*) as religion_count'))
+    ->whereNotNull('religion')
+    ->groupBy('religion')
+    ->orderBy('religion')
+    ->get();
+    return response()->json($religion);
+}
+
+public function retrieveAvailability()
+{
+     $availability = Databank::select('availability', DB::raw('COUNT(*) as availability_count'))
+    ->whereNotNull('availability')
+    ->groupBy('availability')
+    ->orderBy('availability')
+    ->get();
+    return response()->json($availability);
+}
+
 }
